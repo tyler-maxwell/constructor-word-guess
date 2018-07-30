@@ -19,6 +19,14 @@ Word.prototype.toString = function() {
     return word;
 };
 
+Word.prototype.reveal = function() {
+    var word = "";
+    this.letters.forEach(letter => {
+        word += letter.value + " ";
+    });
+    return word;
+};
+
 Word.prototype.guess = function(value) {
     var goodGuess = false;
     this.letters.forEach(letter => {

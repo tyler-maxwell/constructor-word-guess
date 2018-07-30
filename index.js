@@ -48,7 +48,8 @@ var display = function() {
             };
         });
     } else if (guesses === 0) {
-        console.log("You Lose!\n");
+        console.log("You Lose!");
+        console.log(`The answer was: ${currentWord.reveal()}\n`)
         inquirer.prompt([
             {
                 type: "confirm",
