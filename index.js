@@ -4,7 +4,7 @@ var Word = require("./Word.js");
 
 var words = [];
 var currentWord = new Word();
-var guesses = 10;
+var guesses = 6;
 
 var start = function() {
     fs.readFile("words.txt", "utf8", function(error, data) {
@@ -27,7 +27,7 @@ var game = function () {
 var newWord = function() {
     var index = Math.floor(Math.random() * words.length);
     currentWord.init(words[index]);
-    guesses = 10;
+    guesses = 6;
 };
 
 var display = function() {
